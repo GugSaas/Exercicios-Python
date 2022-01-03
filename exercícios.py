@@ -37,7 +37,9 @@ Esse número pode ser informado através de qualquer entrada de sua preferência
 ou pode ser previamente definido no código;
 """
 
-numero = int(input("Que numero deseja encontrar: "))
+numero = int(input("""
+Que numero deseja encontrar na
+sequência de Fibonacci a seguir (2, 3...)? """))
 ultimo_valor = 3
 penultimo_valor = 2
 procura = []
