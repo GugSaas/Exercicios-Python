@@ -58,6 +58,8 @@ else:
         if procura[x] == numero:
             print('Número encontrado na posição:', str(x + 3))
             break
+    else:
+        print('Número não encontrado na sequência Fibonacci (2, 3...)')
 
 print('-' * 45)
 
