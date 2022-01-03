@@ -40,18 +40,22 @@ ou pode ser previamente definido no código;
 numero = int(input("Que numero deseja encontrar: "))
 ultimo_valor = 3
 penultimo_valor = 2
-i = 3
+procura = []
 
-while i <= numero:
-    sequencia = ultimo_valor + penultimo_valor
+for x in range(numero-3):
+    total = penultimo_valor + ultimo_valor
     penultimo_valor = ultimo_valor
-    ultimo = sequencia
-    i += 1
-    if ultimo_valor == numero:
-        print('Número encontrado na sequência')
-        break
+    ultimo_valor = total
+    procura.append(total)
 else:
-    print('Número não encontrado na sequência')
+    if numero == 2:
+        print('Número encontrado na posição 1')
+    elif numero == 3:
+        print('Número encontrado na posição 2')
+    for x in range(len(procura)):
+        if procura[x] == numero:
+            print('Número encontrado na posição:', str(x + 3))
+            break
 
 print('-' * 45)
 
