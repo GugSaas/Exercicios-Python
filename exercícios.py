@@ -70,23 +70,24 @@ Estes dias devem ser ignorados no cálculo da média;
 """
 
 valores_mensais = [10, 15, 20, 18, 17, 0, 0, 12, 13, 22, 19, 15, 0, 0, 17, 23, 11, 12, 9, 0, 10, 11, 17, 21, 17, 20, 0, 0, 14, 25]
-try:
-    while True:
-        valores_mensais.remove(0)
-except ValueError:
-    pass
+
 maior = max(valores_mensais)
 print(f'O maior valor do mês foi de {maior}R$')
 
 menor = min(valores_mensais)
 print(f'O menor valor do mês foi de {menor}R$')
 
+try:
+    while True:
+        valores_mensais.remove(0)
+except ValueError:
+    pass
+
 media = sum(valores_mensais) / len(valores_mensais)
 for x in range(len(valores_mensais)):
     if valores_mensais[x] > media:
         print(f"""O valor de {valores_mensais[x]}R$ do dia {x} superou a media
 mensal de {media:.2f}R$""")
-
 
 print('-' * 45)
 
